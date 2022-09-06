@@ -1,0 +1,102 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="en-gb">
+<!-- Head -->
+
+<head>
+	<title>Tom's Blog - coming sonon</title>
+	<!-- Meta-Tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--Style-CSS -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+	<!--Font-awesome-icons -->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<!--Google-fonts -->
+	<link href="//fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600,700&display=swap"
+		rel="stylesheet">
+		<link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<!-- //Head -->
+<!-- Body -->
+
+<body>
+	<section class="w3l-coming-soon-page">
+		<div class="coming-page-infohny">
+			<div class="wrapper">
+				<div class="header">
+					<div class="logo">
+						<a class="brand-logo" href="index.html">Tom's Blog</a>
+					</div>
+					<div class="w3lhny-button text-right">
+						<img src="images/logo.jpg" alt="" class="logo-img">
+					</div>
+				</div>
+				<div class="coming-block">
+					<h1>Coming Soon</h1>
+					<h2 class="parahny">My Blog is Coming in 2022</h2>
+
+				</div>
+				<div class="alive-bottom">
+					<div class="copyright-footer ">
+						
+						<div class="w3lhny-socialicons">
+							<ul class="social">
+								<li><h6>Follow Me :</h6></li>
+								<li><a href="https://www.linkedin.com/in/thomas-rogers-developer/"><span class="fa fa-linkedin" aria-hidden="true"></span></a></li>
+								<li><a href="https://twitter.com/ThomasRog3rs"><span class="fa fa-twitter" aria-hidden="true"></span></a></li>
+								<li><a href="https://stackoverflow.com/users/19611592/thomasrogers"><span class="fa fa-stack-overflow" aria-hidden="true"></span></a></li>								
+							</ul>
+						</div>
+						<p>© 2022 Tom - Coming Soon. Made with <span class="fa fa-heart"></span> | Designed by <a
+								href="https://w3layouts.com" target="_blank">W3layouts</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			(() => {
+				// Specify the deadline date
+				const deadlineDate = new Date('May 31, 2023 23:59:59').getTime();
+
+				// Cache all countdown boxes into consts
+				const countdownDays = document.querySelector('.countdown__days .number');
+				const countdownHours = document.querySelector('.countdown__hours .number');
+				const countdownMinutes = document.querySelector('.countdown__minutes .number');
+				const countdownSeconds = document.querySelector('.countdown__seconds .number');
+
+				// Update the count down every 1 second (1000 milliseconds)
+				setInterval(() => {
+					// Get current date and time
+					const currentDate = new Date().getTime();
+
+					// Calculate the distance between current date and time and the deadline date and time
+					const distance = deadlineDate - currentDate;
+
+					// Calculations the data for remaining days, hours, minutes and seconds
+					const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+					// Insert the result data into individual countdown boxes
+					countdownDays.innerHTML = days;
+					countdownHours.innerHTML = hours;
+					countdownMinutes.innerHTML = minutes;
+					countdownSeconds.innerHTML = seconds;
+				}, 1000);
+			})();
+		</script>
+
+	</section>
+	<!-- //coming-61-w3l-vv-section -->
+
+</body>
+<!-- //Body -->
+
+</html>
